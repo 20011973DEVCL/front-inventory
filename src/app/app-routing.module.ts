@@ -1,10 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { DashboarRoutingModule } from './modules/dashboard/dashboard-routing.module';
+
+const routes: Routes = [
+  {
+    path:'',
+    pathMatch:'full',
+    redirectTo:'/dashboard'
+  }
+];
+
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    DashboarRoutingModule,
+    RouterModule.forRoot(routes,{enableTracing:false, useHash:true}),
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }
