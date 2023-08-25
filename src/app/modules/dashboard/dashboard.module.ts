@@ -1,9 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-
-import { DashboardComponent } from './pages/dashboard.component';
+import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './pages/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+
+
 
 @NgModule({
   declarations: [

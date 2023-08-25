@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RouterModule } from '@angular/router';
-
-import { SidenavComponent } from './componets/sidenav/sidenav.component';
+import { MaterialModule } from './material.module';
 
 
 
@@ -11,13 +10,13 @@ import { SidenavComponent } from './componets/sidenav/sidenav.component';
   declarations: [
     SidenavComponent
   ],
-  exports:[
+  exports: [
     SidenavComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }
